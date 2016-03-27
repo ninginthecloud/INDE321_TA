@@ -1,8 +1,14 @@
 ####################################
+#     Introduction to R 
+#     April, 1st, 2016
+####################################
+
+
+####################################
 #       set working directory
 ####################################
-setwd("C:/Users/JIN/Desktop/INDE321")   # set working directory in windows
-#setwd("~/Desktop/INDE321")             # set working directory in mac or linux
+setwd("/Users/ningli/GoogleDrive/TA/INDE321/INDE321_TA/codes") # set working directory in mac or linux
+#setwd("C:/Users/YOURNAME/Desktop/INDE321")   # set working directory in windows
 getwd()                                 # show current working directory
 
 help(getwd) # check help doc
@@ -43,16 +49,6 @@ data(mtcars)
 # or import from external files
 # for csv
 mydata <- read.csv(file = "./mtcars.csv", header = TRUE)
-
-# for excel
-library(gdata)                          # load gdata package to use read.xls
-?read.xls
-mydata <- read.xls("mydata.xls")
-
-# for minitab
-library(foreign)                        # load foreign package to use read.mtp
-?read.mtp
-mydata <- read.mtp("mydata.mtp")
 
 ####################################
 #       Viewing data
