@@ -135,21 +135,21 @@ mydata <- mtcars
 
 # scatter plot
 ggplot(data = mydata, aes(x = wt, y = mpg, color = as.factor(cyl))) +
-  geom_point(size = 8) +
+  geom_point(size = 4) +
   xlab("Weight (lb/1000)") + ylab("Miles/(US) gallon") +
   ggtitle("scatter plot example with ggplot2")
 
 # boxplot
 ggplot(data = mydata, aes(x = as.factor(cyl), y = mpg, fill = as.factor(cyl))) + 
   geom_boxplot() + 
-  geom_jitter() +
+  #geom_jitter() +
   xlab("Number of cylinders") + ylab("Miles/(US) gallon") +
   ggtitle("boxplot plot example with ggplot2")
 
 # histogram
 ggplot(data = mydata, aes(mpg, fill = as.factor(cyl))) +
   geom_histogram(aes(y = ..density..), color = "black", alpha = 0.2) + 
-  geom_density(color = "blue", alpha = 0.5) +
+  #geom_density(color = "blue", alpha = 0.5) +
   ggtitle("histogram plot example with ggplot2")
 
 ####################################
