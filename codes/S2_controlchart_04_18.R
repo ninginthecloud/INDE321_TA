@@ -13,6 +13,7 @@ x <- c(0.593, 0.142, 0.329, 0.691, 0.231, 0.793, 0.519, 0.392, 0.418)
 boxplot(x)
 t.test(x, alternative = "greater", mu = 0.3, conf.level = 0.95)
 t.test(x, alternative = "two.sided", mu = 0.3, conf.level = 0.95)
+t.test(x, alternative = "less", mu = 0.3, conf.level = 0.95)
 
 # two samples t tests
 x <- c(91, 87, 99, 77, 88, 91)     # treatment group
@@ -26,6 +27,12 @@ x <- c(16, 20, 21, 22, 23, 22, 27, 25, 27, 28) # regular
 y <- c(19, 22, 24, 24, 25, 25, 26, 26, 28, 32) # premium
 t.test(x,y, alternative = "less")
 t.test(x, y, alternative = "less", paired = TRUE)
+
+#one sample z test
+require(BSDA)
+x <- c(0.593, 0.142, 0.329, 0.691, 0.231, 0.793, 0.519, 0.392, 0.418)
+boxplot(x)
+z.test(x, sigma.x = 0.2,mu = 0.3, conf.level = 0.95)
 
 #test variance
 # one sample chi-squre test
